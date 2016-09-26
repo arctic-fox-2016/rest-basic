@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= title %></title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  </head>
+  <body>
+    <h1 class="text-center">Email Listerer</h1>
+
+    <div class="container">
+      <div class="row">
+        <div class="col-md-6 col-md-offset-3">
+          <form method="post" action="/users">
+
+            <div class="form-group">
+              <input name="email" type="text" class="form-control">
+            </div>
+            <button type="submit" class="btn btn-primary">Add New Email</button>
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <h1 class="text-center">Current List of Emails</h1>
+
+    <table>
+      <thead>
+        <tr>
+          <th>ID</th>
+          <th>Email</th>
+          <th>Created At</th>
+          <th>Updated At</th>
+        </tr>
+      </thead>
+      <tbody>
+        <% for (var i = 0; i < data.length; i++) { %>
+        <tr>
+          <td><%= data[i].dataValues.id %></td>
+          <td><%= data[i].dataValues.email %></td>
+          <td><%= data[i].dataValues.createdAt %></td>
+          <td><%= data[i].dataValues.updatedAt %></td>
+          <td>
+            <form method="put" action="create">
+              <input name="id" type="hidden" class="form-control" value="<%= data[i].dataValues.id %>">
+              <button type="submit" class="btn btn-primary">Add New Email</button>
+            </form>
+          </td>
+        </tr>
+        <% } %>
+      </tbody>
+    </table>
+
+    <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  </body>
+</html>
