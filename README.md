@@ -9,3 +9,5 @@
 | /api/users     |    POST       | Create a User              |
 | /api/users/:id |   DELETE      | Delete a User              |
 | /api/users/:id |    PUT        | Update a User with new Info|
+
+Heroku : https://afternoon-mountain-43533.herokuapp.com/
