@@ -1,0 +1,23 @@
+{
+  "development": {
+    "username": "andrew",
+    "password": "apaapa",
+    "database": "restful",
+    "host": "127.0.0.1",
+    "dialect": "postgres"
+  },
+  "test": {
+    "username": "andrew",
+    "password": "apaapa",
+    "database": "restful",
+    "host": "127.0.0.1",
+    "dialect": "postgres"
+  },
+  "production": {
+    "username": "andrew",
+    "password": "apaapa",
+    "database": "restful",
+    "host": "127.0.0.1",
+    "dialect": "postgres"
+  }
+}
